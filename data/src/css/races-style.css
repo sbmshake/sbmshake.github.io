@@ -1,0 +1,34 @@
+  p.races {
+      font-family: "Arial";
+      font-size: 16px;
+      color: white;
+      line-height: 1;
+  }
+  p.races.date-time {
+    font-size: 14px;
+  }
+  p.races.vs {
+    font-family: "Arial Black";
+    font-size: 30px;
+    line-height: 0.8;
+    padding: 10px 5px;
+  }
+  p.races.name {
+    font-size: 24px;
+  }
+  a.sort {
+    font-family: "Arial";
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    padding: 5px 5px;
+    margin: 5px;
+  }
+
+  hr {
+      width: 700px;
+  }
+
+  td.races {
+    border: solid 10px white;
+  }

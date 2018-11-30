@@ -1,7 +1,52 @@
 <!DOCTYPE html>
 <html>
+        <head>
+                <link rel="stylesheet" type="text/css" href="../data/src/css/main-style.css">
+                <link rel="stylesheet" type="text/css" href="../data/src/css/navbar-style.css">
+                <link rel="stylesheet" type="text/css" href="./data/src/css/login-style.css">
+                  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+                  <style> body {padding: 0; margin: 0;} </style>
+              </head>
 <body>
-<h1>Hello World<?php echo ' This is php';?></h1>
+        <div id="navbar">
+                <a class="navbarBtn" style="margin-left: 50px;" href="javascript:void(0)" onclick="window.location.reload()">HOME</a>
+                <a class="navbarBtn" href="javascript:void(0)">CONTESTANTS</a>
+                <a class="navbarBtn" href="javascript:void(0)">RACES</a>
+                <a class="navbarBtn" href="#about">ABOUT</a>
+                <a class="navbarBtn" href="#credits">CREDITS</a>
+              </div>
+<h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+
+<script> /* NAVBAR */
+        window.onscroll = function() {navbarExpand()};
+        var navbarBtns = document.getElementsByClassName("navbarBtn");
+        var navbar = document.getElementById("navbar");
+        var startScrollPosition = window.pageYOffset;
+        function navbarExpand() {
+          var padding = "";
+          var videoHeight = document.getElementById("video1").clientHeight;
+          var color = "";
+          if(window.pageYOffset == startScrollPosition) {
+            padding = "20px";
+          }
+          else {
+            padding = "10px";
+          }
+          if(window.pageYOffset - startScrollPosition < videoHeight){
+            color = "rgba(0, 0, 0, " + (0.5 + (window.pageYOffset - startScrollPosition) / (2 * videoHeight)).toString() + ")";
+            padding = (20 - (window.pageYOffset - startScrollPosition) / (0.1 * videoHeight)).toString() + "px";
+          }
+          else {
+            color = "rgb(0, 0, 0)";
+            padding = "10px";
+          }
+          navbar.style.backgroundColor = color;
+          for(var i = 0; i < navbarBtns.length; i++) {
+            navbarBtns[i].style.paddingBottom = padding;
+            navbarBtns[i].style.paddingTop= padding;
+          }
+        }
+      </script>
 </body>
 </html>

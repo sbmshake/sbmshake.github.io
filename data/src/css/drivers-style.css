@@ -1,0 +1,40 @@
+img.drivers {
+    padding: 5px 10px;
+    border: none;
+    border-color: rgb(0, 0, 0);
+    width:128px;
+  }
+  p.drivers {
+      font-family: "Arial";
+      font-size: 16px;
+      color: black;
+  }
+  p.drivers span {
+    font-family: "Arial Black";
+  }
+  table.sortArea {
+    position:static;
+    width: 600px;
+    height: 40px;
+    font-family: "Arial";
+    font-size: 16px;
+    text-align:center;
+    color: black;
+    text-decoration: none
+  }
+  a.sort {
+    font-family: "Arial";
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    padding: 5px 5px;
+    margin: 5px;
+  }
+  a.sort:hover {
+        font-family: "Arial BLACK";
+      color: rgb(230, 0, 100);
+  }
+
+  hr {
+      width: 700px;
+  }
