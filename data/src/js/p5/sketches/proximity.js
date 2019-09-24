@@ -5,7 +5,7 @@ const maxDistance = 200;
 const size = 10;
 let w = window.innerWidth;
 let h = 800;
-let phrases = ["Wszystkiego Najlepszego", "Dla kochanej Julitki", "Zdrowia i szczescia"];
+let phrases = ["Kocham Ciebie bardzo", "Kochana Wiki", "Wiedz proszę"];
 var phrase;
 var t;
 function setup(){
