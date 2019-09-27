@@ -5,15 +5,16 @@ const maxDistance = 200;
 const size = 10;
 let w = window.innerWidth;
 let h = 800;
-let phrases = ["Kocham Ciebie bardzo", "Kochana Wiki", "Wiedz proszę"];
+let phrases = ["Kochana Wiki!", "Czy to jest koniec?", "Nie! Dopiero zaczynamy.", "Do zobaczenia niebawem :)", "Kocham Ciebie tak bardzo!"];
 var phrase;
+let phraseNo = 0
 var t;
 function setup(){
   createCanvas(w, h);
   for(var i = 0; i < maxParticles; i++) {
 	  particles.push(new Particle(random(0, w), random(0, h)));
   }
-  phrase = phrases[Math.floor(Math.random() * phrases.length)];
+  phrase = phrases[phraseNo];
   
   t = 0;
 }
@@ -59,7 +60,10 @@ function draw(){
 	t++;
 	if(t >= 100){
 		t = 0;
-		phrase = phrases[Math.floor(Math.random() * phrases.length)];
+		phraseNo += 1;
+		if(phraseNo > 4)
+			phraseNo = 0;
+		phrase = phrases[phraseNo];
 	}
 	strokeWeight(7);
 	textSize(100);
